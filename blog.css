@@ -1,0 +1,968 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+@charset "utf-8";
+/*!
+Theme: boilerplate
+Author: Hatena Blog Team
+Responsive: yes
+Description:
+はてなブログのデザインCSSカスタマイズの土台に適したデザインテーマです。
+このテーマをもとにしてCSSを書くと比較的楽にカスタマイズできます。
+特定の部分（例えば記事本文の書式やコメント欄のスタイルなど）だけをコピーして使ってもかまいません。
+もちろんそのままの状態でも、シンプルなテーマとして使うことができます。
+このCSSおよびLESSファイルは自由に複製・再配布できます。
+このテーマをもとにしたデザインテーマの配布も自由です。
+Licensed under the MIT license.
+*/
+/* ------------------------------------------------------------------------- *
+ *  Reset - http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126
+ * ------------------------------------------------------------------------- */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+.clearfix {
+  display: block;
+  *zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+  clear: both;
+}
+.inline-block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/*!   Global
+/* -------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  color: #454545;
+  background-color: #f0f0f0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  #container {
+    padding-top: 37px
+    /* グローバルヘッダを fixed にしているため */
+  }
+  .globalheader-off #container {
+    padding-top: 0
+    /*グローバルヘッダ非表示の時*/
+  }
+}
+#content {
+  max-width: 1070px;
+  margin: 0 auto 30px;
+}
+@media (min-width: 1024px) and (max-width: 1024px) {
+  #content {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #content {
+    width: 100%;
+  }
+}
+#content-inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+}
+@media screen and (max-width: 1023px) {
+  #content-inner {
+    display: block;
+  }
+}
+#main {
+  max-width: 740px;
+}
+@media (min-width: 1025px) {
+  #main {
+    margin-right: 30px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1024px) {
+  #main {
+    margin-right: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #main {
+    min-width: 100%;
+    margin-right: 0;
+    padding: 0 10px;
+  }
+}
+#main .entry {
+  padding: 15px 30px 40px;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 639px) {
+  #main .entry {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 379px) {
+  #main .entry {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+::-moz-selection {
+  background: #3b8dbd;
+  color: #fff;
+}
+::selection {
+  background: #3b8dbd;
+  color: #fff;
+}
+/*!   ヘッダー
+/* -------------------------------------------------- */
+#blog-title {
+  background: #33363b;
+  padding: 40px;
+}
+#blog-title-inner {
+  max-width: 1070px;
+  margin: auto;
+}
+#title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1;
+}
+#title a {
+  color: #fff;
+}
+#blog-description {
+  font-weight: normal;
+  font-size: 80%;
+  margin: 5px 0 0 0;
+}
+/* ヘッダ（グローバルヘッダ）グローバルヘッダの中はiframeですが、#globalheader-container に背景色や文字色を指定することでirameの中にも色が反映されます。*/
+#globalheader-container {
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+/* ヘッダ画像を設定したとき */
+.header-image-enable #title {
+  padding-top: 70px;
+}
+.header-image-enable #title,
+.header-image-enable #blog-description {
+  padding-left: 20px;
+}
+/*!   サイドバー
+/* -------------------------------------------------- */
+#box2 {
+  width: 300px
+  /* Profile module */
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #box2 {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 719px) {
+  #box2 {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #box2 #box2-inner {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+#box2 .hatena-module {
+  margin-bottom: 30px;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #box2 .hatena-module {
+    min-width: calc(50% - 5px);
+  }
+  #box2 .hatena-module:first-of-type {
+    margin-right: 10px;
+  }
+  #box2 .hatena-module:nth-of-type(2n+4) {
+    margin-right: 10px;
+  }
+}
+#box2 .hatena-module .hatena-module-title {
+  position: relative;
+  margin-bottom: 0;
+  padding: 3px 6px;
+  color: #111111;
+  font-weight: normal;
+}
+#box2 .hatena-module .hatena-module-title::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 30%;
+  border-bottom: 2px solid #33363b;
+}
+#box2 .hatena-module .hatena-module-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border-bottom: 2px solid #f0f0f0;
+}
+#box2 .hatena-module .hatena-module-title a {
+  color: #111111;
+}
+#box2 .hatena-module .hatena-module-body {
+  padding: 10px 20px 10px;
+}
+#box2 .hatena-module .hatena-module-body:hover {
+  color: #3b8dbd;
+}
+#box2 .hatena-module .hatena-module-body a {
+  color: #666;
+  font-size: 85%;
+}
+#box2 .hatena-module .hatena-module.hatena-module-search-box {
+  padding: 20px;
+}
+#box2 .hatena-module-profile .profile-icon {
+  float: left;
+  margin: 0 10px 10px 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-radius: 5px;
+  background-clip: padding-box;
+}
+#box2 .hatena-module-profile .id {
+  display: block;
+  font-weight: bold;
+  font-size: 110%;
+  margin-bottom: 5px;
+}
+#box2 .hatena-module-profile .profile-description {
+  font-size: 90%;
+}
+#box2 .hatena-module-profile .profile-description p {
+  margin-top: 0;
+}
+/*!   タイポグラフィ
+/* -------------------------------------------------- */
+a:link {
+  color: #3b8dbd;
+}
+a:visited {
+  color: #3b8dbd;
+}
+a:hover {
+  color: #0f5373;
+}
+a:active {
+  color: #0f5373;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover,
+h1 a:visited,
+h2 a:visited,
+h3 a:visited,
+h4 a:visited,
+h5 a:visited,
+h6 a:visited {
+  color: #111111;
+  text-decoration: none;
+}
+a.keyword {
+  color: #454545;
+  cursor: help !important
+  /*! NEED IMPORTANT */
+}
+/*   投稿ページ
+/* -------------------------------------------------- */
+.entry {
+  position: relative;
+  margin-bottom: 100px;
+}
+/* タイトル */
+.entry-header {
+  padding: 30px 0 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dddddd;
+  position: relative;
+}
+.entry-title {
+  margin: 0;
+  line-height: 1.3;
+  font-size: 160%;
+}
+.entry-categories {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -30px;
+  margin-right: -30px;
+  padding: 0 30px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1;
+}
+.entry-categories a {
+  color: #777777;
+}
+.entry-categories a::before {
+  content: '\f022';
+  font-family: blogicon;
+  padding-right: .15em;
+}
+.entry-categories a::after {
+  content: '\002F';
+  padding-left: 0.5ex;
+}
+.entry-categories a:last-of-type::after {
+  content: '';
+  padding: 0;
+}
+.entry-categories.no-categories {
+  margin: 0
+  /* カテゴリー無いとき*/
+}
+.no-categories .entry-header {
+  padding-bottom: 0;
+}
+/* 日付 */
+.date {
+  display: inline-block;
+  position: relative;
+  margin-bottom: .2em;
+  padding: 4px;
+  border-radius: 3px;
+  background: #33363b;
+  font-weight: 300;
+  line-height: 1;
+  font-family: Lato, Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Ariai Nova', 'Segoe UI', 'Yu Gothic Light', sans-serif;
+}
+.date::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 42%;
+  border-top: 6px solid #33363b;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+.date a {
+  font-size: 14px;
+  color: #fff;
+}
+/* entry-content の中の書式 */
+.entry-content {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+  line-height: 1.7;
+  font-size: 95%;
+}
+.entry-content p {
+  margin-bottom: 1em;
+}
+.entry-content img {
+  max-width: 100%;
+}
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+  margin: 1.3em 0 0.8em 0;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  color: #111;
+}
+.entry-content h1 {
+  font-size: 160%;
+}
+.entry-content h2 {
+  margin: 1.3em -30px 0.8em;
+  padding: 0 30px 10px;
+  font-size: 150%;
+}
+@media screen and (max-width: 639px) {
+  .entry-content h2 {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 379px) {
+  .entry-content h2 {
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.entry-content h3 {
+  font-size: 140%;
+}
+.entry-content h4 {
+  font-size: 130%;
+}
+.entry-content h5 {
+  font-size: 110%;
+}
+.entry-content h6 {
+  font-size: 100%;
+}
+.entry-content table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1em;
+}
+.entry-content table img {
+  max-width: none;
+}
+.entry-content table th,
+.entry-content table td {
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+}
+.entry-content table th {
+  background: #f5f5f5;
+}
+.entry-content blockquote {
+  border: 1px solid #dddddd;
+  margin: 0 0 10px;
+  padding: 20px;
+}
+.entry-content blockquote p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.entry-content pre {
+  border: 1px solid #dddddd;
+  margin: 0 0 10px;
+  padding: 20px;
+  white-space: pre;
+}
+.entry-content pre > code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: 0;
+  background: transparent;
+  font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
+}
+.entry-content code {
+  font-size: 90%;
+  margin: 0 2px;
+  padding: 0 5px;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
+}
+.entry-content .hatena-asin-detail li {
+  line-height: 1.4;
+}
+/* カテゴリ */
+/* 「編集する」ボタン */
+.entry-header-menu {
+  position: absolute;
+  bottom: 0px;
+  left: -60px;
+}
+.entry-header-menu a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 4px 10px 4px;
+  margin-bottom: 0;
+  line-height: 18px;
+  color: #454545;
+  background-color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-radius: 2px;
+  background-clip: padding-box;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-decoration: none !important;
+}
+.entry-header-menu a:hover {
+  background-color: #f5f5f5;
+  text-decoration: none !important;
+}
+/* entry-footer */
+.entry-footer {
+  margin-top: 10px;
+}
+.entry-footer-section {
+  font-size: 80%;
+  color: #777777;
+}
+.entry-footer-section a {
+  color: #777777;
+}
+.social-buttons,
+.entry-footer-html {
+  margin: 10px 0;
+}
+/* コメント */
+.comment-box ul {
+  list-style: none;
+  margin: 0 0 15px 0;
+  padding: 0;
+  font-size: 95%;
+  line-height: 1.7;
+}
+.comment-box li {
+  padding: 10px 0 10px 60px;
+  border-bottom: 1px solid #dddddd;
+  position: relative;
+}
+.comment-box li:first-child {
+  border-top: 1px solid #dddddd;
+}
+.comment-box .read-more-comments {
+  padding-left: 0;
+}
+.comment-box .hatena-id-icon {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 50px !important;
+  height: 50px !important;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.comment-user-name {
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+.comment-content {
+  font-size: 90%;
+  margin: 0 0 10px 0;
+  word-wrap: break-word;
+}
+.comment-content p {
+  margin: 0 0 10px 0;
+}
+.comment-metadata {
+  font-size: 80%;
+  color: #777777;
+  margin: 0;
+}
+.comment-metadata a {
+  color: #777777;
+}
+.leave-comment-title {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 4px 10px 4px;
+  margin-bottom: 0;
+  line-height: 18px;
+  color: #454545;
+  background-color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-radius: 2px;
+  background-clip: padding-box;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-decoration: none !important;
+}
+.leave-comment-title:hover {
+  background-color: #f5f5f5;
+  text-decoration: none !important;
+}
+/*!   Buttons
+/* -------------------------------------------------- */
+.btn {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 4px 10px 4px;
+  margin-bottom: 0;
+  line-height: 18px;
+  color: #454545;
+  background-color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-radius: 2px;
+  background-clip: padding-box;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-decoration: none !important;
+}
+.btn:hover {
+  background-color: #f5f5f5;
+  text-decoration: none !important;
+}
+.btn-small {
+  padding: 2px 10px !important;
+  font-size: 11px !important;
+}
+.btn-large {
+  padding: 13px 19px;
+  font-size: 17px;
+  line-height: normal;
+  font-weight: bold;
+}
+/* パンくず（カテゴリーページで表示されます） */
+#top-box {
+  margin: 10px auto 20px;
+  font-size: 90%;
+}
+#top-box .breadcrumb {
+  border: 1px solid #dddddd;
+  padding: 10px;
+}
+/* urllist module
+リンク・最新記事・最近のコメント・月別アーカイブ・カテゴリモジュールは .hatena-urllist という共通の class が振られます
+*/
+.hatena-urllist {
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.hatena-urllist li {
+  padding: 8px 0;
+  border-bottom: 1px solid #dddddd;
+  line-height: 1.5;
+}
+.hatena-urllist li a {
+  text-decoration: none;
+}
+/* Search module */
+.hatena-module-search-box .search-form {
+  border: 1px solid #dddddd;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-radius: 3px;
+  background-clip: padding-box;
+  width: 100%;
+  position: relative;
+}
+.hatena-module-search-box .search-module-input {
+  padding: 5px;
+  color: #454545;
+  background: none;
+  border: none;
+  outline: none;
+  height: 20px;
+  width: 90%;
+  box-sizing: content-box;
+}
+.hatena-module-search-box .search-module-button {
+  width: 20px;
+  height: 20px;
+  background: transparent url(http://blog.hatena.ne.jp/images/theme/search.png) no-repeat right center;
+  border: none;
+  outline: none;
+  text-indent: -9999px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  opacity: 0.5;
+}
+.hatena-module-search-box .search-module-button:hover {
+  opacity: 0.85;
+}
+/* Pager */
+.pager {
+  margin: 1em 0;
+  display: block;
+  *zoom: 1;
+}
+.pager:after {
+  display: block;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+  clear: both;
+}
+.pager .pager-prev {
+  float: left;
+  text-align: left;
+  width: 45%;
+}
+.pager .pager-next {
+  float: right;
+  text-align: right;
+  width: 45%;
+}
+/* Footer */
+#footer {
+  padding: 30px 0;
+  text-align: center;
+  color: #777777;
+  line-height: 1.5;
+  font-size: 80%;
+}
+#footer p {
+  margin: 0;
+}
+#footer a {
+  color: #777777;
+}
+/* About ページ */
+.page-about dt {
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 5px;
+}
+.page-about dd {
+  margin-left: 0;
+  margin-bottom: 30px;
+}
+/* archive ページ */
+.page-archive .archive-entries .archive-entry {
+  margin-bottom: 3em;
+}
+.page-archive .archive-entries .entry-title {
+  font-size: 130%;
+  margin: 0 0 .5em;
+}
+.page-archive .archive-entries .categories {
+  margin: 0 0 .5em;
+}
+.page-archive .archive-entries .entry-description {
+  margin: 0 0 1em;
+  line-height: 1.7em;
+  font-size: 95%;
+}
+.page-archive .categories a {
+  color: #fff;
+  font-size: 70%;
+  background: #aaa;
+  padding: 3px 5px;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-right: 2px;
+}
+/*  import media queries */
+/* Media Queries - Retina Display */
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .hatena-module-search-box .search-module-button {
+    background: transparent url(http://blog.hatena.ne.jp/images/theme/search@2x.png) no-repeat right center;
+    background-size: 20px 20px;
+  }
+}
+/* Media Queries - Tablet */
+/* Media Queries - Small Tablet & Smartphone */
+@media (max-width: 767px) {
+  #globalheader-container {
+    position: static;
+  }
+  .hatena-module {
+    width: 100%;
+    float: none;
+  }
+  .entry-header-menu {
+    top: -30px;
+    left: 0px;
+  }
+}
+/* Media Queries - Smartphone */
