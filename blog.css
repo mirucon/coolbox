@@ -402,10 +402,8 @@ body {
 /*!   タイポグラフィ
 /* -------------------------------------------------- */
 a {
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
-}
-a:link {
+  -webkit-transition: .2s;
+          transition: .2s;
   color: #3b8dbd;
 }
 a:visited {
