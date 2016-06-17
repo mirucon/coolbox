@@ -1,17 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300);
 @charset "utf-8";
 /*!
-Theme: boilerplate
-Author: Hatena Blog Team
+Theme: coolbox
+Author: Mirucon
 Responsive: yes
 Description:
-はてなブログのデザインCSSカスタマイズの土台に適したデザインテーマです。
-このテーマをもとにしてCSSを書くと比較的楽にカスタマイズできます。
-特定の部分（例えば記事本文の書式やコメント欄のスタイルなど）だけをコピーして使ってもかまいません。
-もちろんそのままの状態でも、シンプルなテーマとして使うことができます。
-このCSSおよびLESSファイルは自由に複製・再配布できます。
-このテーマをもとにしたデザインテーマの配布も自由です。
-Licensed under the MIT license.
+シンプルかつ高機能を目指したはてなブログ用のテーマです。
 */
 /* ------------------------------------------------------------------------- *
  *  Reset - http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126
