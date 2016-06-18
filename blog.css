@@ -322,11 +322,6 @@ body {
             flex-wrap: wrap;
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
-  #box2 .ad {
-    width: 100%;
-  }
-}
 #box2 .hatena-module {
   margin-bottom: 30px;
   background: #fff;
@@ -604,7 +599,7 @@ a.keyword {
 .entry-content h3 {
   position: relative;
   margin: 1.3em -10px;
-  padding: 0 10px 2px;
+  padding: 0 10px 5px;
   font-size: 140%;
 }
 @media (max-width: 379px) {
@@ -621,7 +616,7 @@ a.keyword {
   bottom: 0;
   left: 0;
   z-index: 1;
-  width: 30%;
+  width: 40%;
   border-bottom: 2px solid #33363b;
 }
 .entry-content h3::after {
