@@ -1,0 +1,7 @@
+@font-face {
+ font-family: icomoon;
+ src: url('https://github.com/Mirucon/coolbox/raw/master/fonts/icomoon.ttf') format('truetype'),
+ url('https://github.com/Mirucon/coolbox/raw/master/fonts/icomoon.woff') format('woff'),
+ url('https://github.com/Mirucon/coolbox/raw/master/fonts/icomoon.eot?#iefix') format('embedded-opentype');
+ font-weight: normal; font-style: normal;
+}
