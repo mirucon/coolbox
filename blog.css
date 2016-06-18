@@ -133,22 +133,8 @@ table {
 a {
   text-decoration: none;
 }
-.clearfix {
-  display: block;
-  *zoom: 1;
-}
-.clearfix:after {
-  display: block;
-  visibility: hidden;
-  font-size: 0;
-  height: 0;
-  clear: both;
-}
-.ellipsis {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
+/*   Mixin
+/* -------------------------------------------------- */
 /*!   Global
 /* -------------------------------------------------- */
 *,
@@ -376,10 +362,6 @@ body {
 #box2 .hatena-module-profile .profile-icon {
   float: left;
   margin: 0 10px 10px 0;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
   border-radius: 5px;
   background-clip: padding-box;
 }
@@ -807,10 +789,6 @@ a.keyword {
   background-color: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
   border-radius: 2px;
   background-clip: padding-box;
   cursor: pointer;
@@ -864,10 +842,6 @@ a.keyword {
   left: 0;
   width: 50px !important;
   height: 50px !important;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
   border-radius: 3px;
   background-clip: padding-box;
 }
@@ -900,10 +874,6 @@ a.keyword {
   background-color: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
   border-radius: 2px;
   background-clip: padding-box;
   cursor: pointer;
@@ -928,10 +898,6 @@ a.keyword {
   background-color: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
   border-radius: 2px;
   background-clip: padding-box;
   cursor: pointer;
@@ -1100,10 +1066,6 @@ a.keyword {
 /* Search module */
 .hatena-module-search-box .search-form {
   border: 1px solid #dddddd;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
   border-radius: 3px;
   background-clip: padding-box;
   width: 100%;
