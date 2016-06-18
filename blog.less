@@ -6,8 +6,16 @@ Responsive: yes
 Description:
 シンプルかつ高機能を目指したはてなブログ用のテーマです。
 */
-@import "less/_normalize.less";
-@import "less/_variable.less";
+@import "less files/_normalize.less";
+@import "less files/_variable.less";
+@font-face {
+ font-family: icomoon;
+ src: url('https://rawgit.com/Mirucon/coolbox/master/fonts/icomoon.ttf') format('truetype'),
+ url('https://rawgit.com/Mirucon/coolbox/master/fonts/icomoon.woff') format('woff'),
+ url('https://rawgit.com/Mirucon/coolbox/master/fonts/icomoon.eot?#iefix') format('embedded-opentype');
+ font-weight: normal; font-style: normal;
+}
+
 /*   Mixin
 /* -------------------------------------------------- */
 .box-shadow (@x: 0, @y: 0, @blur: 6px, @color: rgba(0,0,0,.20)) {
@@ -294,8 +302,8 @@ a.keyword {
  }
  h3 {
   position: relative;
-  margin: 1.3em -10px;
-  padding: 0 10px 5px;
+  margin: 1.3em  -3px;
+  padding: 0 3px 5px;
   font-size: 140%;
   @media (max-width: 379px) { margin-left: -5px; margin-right: -5px; padding-left: 5px; padding-right: 5px }
   &::before {
@@ -303,14 +311,14 @@ a.keyword {
    position: absolute;
    bottom: 0;left: 0;z-index: 1;
    width: 40%;
-   border-bottom: 2px solid @accent;
+   border-bottom: 3px solid @accent;
   }
   &::after {
    content: '';
    position: absolute;
    bottom: 0;right: 0;
    width: 100%;
-   border-bottom: 2px solid #f0f0f0;
+   border-bottom: 3px solid #f0f0f0;
   }
  }
  h4 {
@@ -348,9 +356,20 @@ a.keyword {
  }
 
  blockquote {
-  border: 1px solid @border;
   margin: 0 0 10px;
   padding: 20px;
+  padding-left: 50px;
+  border: 1px solid @border;
+  background: #eee;
+  border-radius: 3px;
+  &::before {
+   content: "\f10d";
+   position: absolute;
+   top: -5px; left: 10px;
+   font-family: icomoon;
+   color: #ccc;
+   font-size: 32px;
+  }
   p {
    margin-top: 0;
    margin-bottom: 0;
