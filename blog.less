@@ -7,8 +7,16 @@ Description:
 シンプルかつ高機能を目指したはてなブログ用のテーマです。
 */
 @import "less/_normalize.less";
-@import "less/_mixin.less";
 @import "less/_variable.less";
+/*   Mixin
+/* -------------------------------------------------- */
+.box-shadow (@x: 0, @y: 0, @blur: 6px, @color: rgba(0,0,0,.20)) {
+    box-shadow: @x @y @blur @color;
+}
+.border-radius(@radius: 5px) {
+    border-radius: @radius;
+    background-clip: padding-box;
+}
 
 /*!   Global
 /* -------------------------------------------------- */
