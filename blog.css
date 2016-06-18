@@ -231,6 +231,7 @@ body {
 @media (max-width: 1023px) {
   #main {
     width: 100%;
+    min-width: 100%;
   }
 }
 ::-moz-selection {
@@ -321,6 +322,11 @@ body {
             flex-wrap: wrap;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  #box2 .ad {
+    width: 100%;
+  }
+}
 #box2 .hatena-module {
   margin-bottom: 30px;
   background: #fff;
@@ -328,13 +334,8 @@ body {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   #box2 .hatena-module {
-    min-width: calc(50% - 5px);
-  }
-  #box2 .hatena-module:first-of-type {
-    margin-right: 10px;
-  }
-  #box2 .hatena-module:nth-of-type(2n+4) {
-    margin-right: 10px;
+    width: calc(50% - 10px);
+    margin: 0 5px 20px;
   }
 }
 #box2 .hatena-module .hatena-module-title {
