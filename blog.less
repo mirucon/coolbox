@@ -67,6 +67,7 @@ html, body {
  background: @link;
  color: #fff;
 }
+b, strong { font-weight: bold }
 
 /*!   ヘッダー
 /* -------------------------------------------------- */
@@ -446,11 +447,11 @@ a.keyword {
  }
  .pager-next {
   @media (min-width: 768px) { border-left: 1px solid @border; }
-  &::before { content:'次の投稿'; }
+  &::before { content:'前の投稿'; }
   .pager-arrow { right: 10px }
  }
  .pager-prev {
-  &::before { content:'前の投稿'; }
+  &::before { content:'次の投稿'; }
   .pager-arrow { left: 10px }
  }
 }

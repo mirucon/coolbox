@@ -234,6 +234,10 @@ body {
   background: #3b8dbd;
   color: #fff;
 }
+b,
+strong {
+  font-weight: bold;
+}
 /*!   ヘッダー
 /* -------------------------------------------------- */
 #blog-title {
@@ -781,13 +785,13 @@ a.keyword {
   }
 }
 .permalink.pager .pager-next::before {
-  content: '次の投稿';
+  content: '前の投稿';
 }
 .permalink.pager .pager-next .pager-arrow {
   right: 10px;
 }
 .permalink.pager .pager-prev::before {
-  content: '前の投稿';
+  content: '次の投稿';
 }
 .permalink.pager .pager-prev .pager-arrow {
   left: 10px;
