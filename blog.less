@@ -68,6 +68,9 @@ html, body {
  color: #fff;
 }
 b, strong { font-weight: bold }
+small { font-size: smaller }
+sub { vertical-align: sub; font-size: smaller }
+sup { vertical-align: super; font-size: smaller }
 
 /*!   ヘッダー
 /* -------------------------------------------------- */
@@ -436,6 +439,7 @@ a.keyword {
   }
   a {
    display: block;
+   position: relative;
    width: 100%; height: 100%;
    padding: 32px 40px 32px 20px;
    color: @text;
@@ -619,7 +623,7 @@ a.keyword {
 
    .entry-title {
     .entry-header .entry-title;
-    margin: 0 0 .5em;
+    margin: 0 0 .3em;
     font-size: 150%;
    }
 
@@ -634,10 +638,12 @@ a.keyword {
     margin-right: 2px;
     padding: 3px 5px;
     border-radius: 3px;
-    background: #aaa;
+    background: #666;
     color: #fff;
-    font-size: 70%;
+    font-size: 75%;
+    transition: all .4s ease-out;
     &::before { content: '\f022' ; font-family: blogicon; padding-right: .5ex }
+    &:hover { background: #444 }
    }
 
    .entry-thumb { border-radius: 3px; }
