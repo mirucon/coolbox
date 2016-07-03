@@ -401,8 +401,8 @@ sup {
 /*!   タイポグラフィ
 /* -------------------------------------------------- */
 a {
-  -webkit-transition: .2s;
-          transition: .2s;
+  -webkit-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
   color: #3b8dbd;
 }
 a:visited {
@@ -744,8 +744,8 @@ a.keyword {
   position: relative;
   height: 100%;
   text-align: center;
-  -webkit-transition: .4s;
-          transition: .4s;
+  -webkit-transition: all .4s;
+          transition: all .4s;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
@@ -778,8 +778,8 @@ a.keyword {
   padding: 32px 40px 32px 20px;
   color: #444444;
   text-align: center;
-  -webkit-transition: .2s;
-          transition: .2s;
+  -webkit-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
 }
 .permalink.pager .pager-next a:hover > .pager-arrow,
 .permalink.pager .pager-prev a:hover > .pager-arrow {

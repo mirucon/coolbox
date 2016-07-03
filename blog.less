@@ -194,7 +194,7 @@ sup { vertical-align: super; font-size: smaller }
 
 /*!   タイポグラフィ
 /* -------------------------------------------------- */
-a { transition: .2s; color: @link }
+a { transition: all .2s ease-out; color: @link }
 a:visited{ color: @link }
 a:hover  { color: #0f5373 }
 a:active { color: #0f5373 }
@@ -426,7 +426,7 @@ a.keyword {
   position: relative;
   height: 100%;
   text-align: center;
-  transition: .4s;
+  transition: all .4s;
   flex-grow: 1; flex: 1;
   &:hover { background: #efefef }
   &::before {
@@ -444,7 +444,7 @@ a.keyword {
    padding: 32px 40px 32px 20px;
    color: @text;
    text-align: center;
-   transition: .2s;
+   transition: all .2s ease-out;
    &:hover > .pager-arrow { color: @link }
   }
   .pager-arrow  { position: absolute; font-size: 24px; line-height: 1; }
