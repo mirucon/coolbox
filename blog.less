@@ -851,19 +851,20 @@ a.keyword {
     border: 1px solid @border;
     background: #fff;
     .box-shadow;
-    a:first-child {
-      font-weight: normal
-    }
-    a:first-child span {
-      display: none
-    }
-    a:first-child::before {
-      content: '\f017';
-      font-family: blogicon;
-      margin-right: -.5ex
-    }
-    a:first-child::after {
-      content: 'HOME'
+  }
+}
+.breadcrumb-inner {
+  & > *:first-child {
+    a {
+      font-weight: normal;
+      &::before {
+        content: '\f017';
+        font-family: blogicon;
+        margin-right: -.5ex;
+      }
+      &::after {
+        content: 'HOME'
+      }
     }
   }
 }
