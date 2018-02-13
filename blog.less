@@ -854,17 +854,17 @@ a.keyword {
   }
 }
 .breadcrumb-inner {
-  & > *:first-child {
-    a {
-      font-weight: normal;
-      &::before {
-        content: '\f017';
-        font-family: blogicon;
-        margin-right: -.5ex;
-      }
-      &::after {
-        content: 'HOME'
-      }
+  & > a:first-child {
+    &::before {
+      content: '\f017';
+      font-family: blogicon;
+      margin-right: -.5ex;
+    }
+    &::after {
+      content: 'HOME'
+    }
+    span {
+      display: none;
     }
   }
 }

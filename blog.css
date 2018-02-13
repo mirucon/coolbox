@@ -974,16 +974,16 @@ a.keyword {
   background: #fff;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
-.breadcrumb-inner > *:first-child a {
-  font-weight: normal;
-}
-.breadcrumb-inner > *:first-child a::before {
+.breadcrumb-inner > a:first-child::before {
   content: '\f017';
   font-family: blogicon;
   margin-right: -0.5ex;
 }
-.breadcrumb-inner > *:first-child a::after {
+.breadcrumb-inner > a:first-child::after {
   content: 'HOME';
+}
+.breadcrumb-inner > a:first-child span {
+  display: none;
 }
 /* アーカイブページ */
 .page-archive .archive-entries {
